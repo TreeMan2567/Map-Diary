@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title> Map - Diary</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="largePicture.css">
+
+  <script src="mapdata/mapdata.js"></script>
+  <script src="mapdata/markers.js"></script>
+  <script src="mapdata/startpoint.js"></script>
+  <script src="mapFunctions.js"></script>
+</head>
+<body onload="PrepareFilters(); UpdateMap()" class="unselectable">
+
+<div id="map" class="map"></div>
+<div class="point-details"> 
+  <img src="img/No_image_available.png" class="img-details round-border" id="img-details">
+
+  <div class="text-details round-border">
+    <h4 id="img-selector"> <button onclick="SwitchImage(-1)"><--</button> <a id="img-icons">x</a> <button onclick="SwitchImage(1)">--></button> </h4>
+  </div>
+
+  <div class="text-details round-border">
+    <h1 id="title-details"> - </h1>
+  </div>
+
+  <div class="text-details  round-border">
+    <h4 id="date-details"> - </h4>
+  </div>
+
+  <div class="description-details round-border" id="description-details">
+    - <br>
+    - <br>
+    -
+  </div>
+
+  <div  >
+    <table class="mid">
+      <tr>
+        <td><input type="checkbox" name="colors" id="color-0" checked="true"> <label id="label-0"> niebieski </label> </td>
+        <td><input type="checkbox" name="colors" id="color-2" checked="true"> <label id="label-2"> zielony </label> </td>
+        <td><input type="checkbox" name="colors" id="color-4" checked="true"> <label id="label-4"> różowy </label> </td>
+        <td><input type="checkbox" name="colors" id="color-6" checked="true"> <label id="label-6"> szary </label> </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="colors" id="color-1" checked="true"> <label id="label-1"> czerwony </label> </td>
+        <td><input type="checkbox" name="colors" id="color-3" checked="true"> <label id="label-3"> pomaranczowy </label> </td>
+        <td><input type="checkbox" name="colors" id="color-5" checked="true"> <label id="label-5"> fioletowy </label> </td>
+        <td><input type="checkbox" name="colors" id="color-7" checked="true"> <label id="label-7"> czarny </label> </td>
+      </tr>
+
+    </table>
+    
+    <div class="mid"> search: <input type="text" id="title-input"> </div>
+    <div class="mid"> <input type="date" id="from-input"> &nbsp; - &nbsp; <input type="date" id="to-input"> &nbsp;&nbsp; </div>
+
+    <div class="mid"> <button onclick="UpdateMap()">filter</button> </div>
+  </div>
+</div>
+
+<div class="largePictureBackground" id="largePictureBackground" style ="display:none;" onclick="LargePictureExit()"></div>
+
+<div class="largePicture unselectable" style="display: none;" id="largePicture">
+  <div onclick="LargePictureSwitch(-1)"> <p> < </p> </div>
+  <img src="img/No_image_available.png" id="largePictureImg">
+  <div onclick="LargePictureSwitch(1)"> <p> > </p> </div>
+</div>
+<div id="debug"> </div>
+</body>
+</html>

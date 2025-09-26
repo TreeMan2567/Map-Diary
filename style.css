@@ -1,0 +1,90 @@
+:root {
+    --cl_main: rgb(57, 122, 196);
+    --cl_secondary: rgb(110, 175, 219);
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+ }
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.map {
+    width: 67%;
+    height: 100%;
+
+    float: left;
+}
+
+.point-details {
+    width: 33%;
+    height: 100%;
+
+    float: left;
+
+    background-color: var(--cl_main);
+    color: white;
+}
+
+.img-details {
+    position: relative;
+    left: 2.5%;
+    width: 95%;
+    height: 30%;
+
+    margin-top: 5px;
+
+    object-fit: contain;
+    background-color: var(--cl_secondary);
+}
+
+.text-details {
+    position: relative;
+    left: 2.5%;
+    width: 95%;
+
+    margin-top: 5px;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--cl_secondary);
+}
+
+.description-details {
+    position: relative;
+    left: 2.5%;
+    width: calc(95% - 20px);
+    height: 40%;
+
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+
+    background-color: var(--cl_secondary);
+}
+
+.round-border {
+    border: pink 0px solid;
+    border-radius: 10px;
+}
+
+h1, h4 {
+    margin: 0px;
+}
+
+.mid {
+    display: flex;
+    justify-content: center;
+}

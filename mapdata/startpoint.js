@@ -1,0 +1,2 @@
+const START_POINT = [52.154023, 18.99031];
+const ZOOM_LEVEL = 7;
