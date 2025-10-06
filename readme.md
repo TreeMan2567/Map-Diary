@@ -1,5 +1,5 @@
 # Map - Diary
-Project created primarly as a gift and personal use.
+Project facilitates creating a map with points you've been in. Added points can have photos attached to it, title and quick note. There is also option for assigning a date (or a couple of dates) and filtering them by types.
 
 Version 1.2
 
